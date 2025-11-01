@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Filosofía y Educación</title>
+<style>
+  /* Tipografía */
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@700&display=swap');
+
+  body {
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+    background: #F5F5F5;
+    color: #333;
+    line-height: 1.6;
+  }
+  h2 { font-family: 'Poppins', sans-serif; color: #00BFA6; text-align:center; }
+  h3 { color: #00BFA6; margin-top:20px; }
+  section { padding: 30px; max-width: 800px; margin: auto; }
+  table { width: 100%; border-collapse: collapse; margin-top:15px; }
+  th, td { border:1px solid #ddd; padding:8px; text-align:left; }
+  th { background:#00BFA6; color:white; }
+  /* Nube de palabras */
+  .nube-palabras { display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin-top:15px; }
+  .nube-palabras span { background:#FFD166; padding:8px 14px; border-radius:18px; position:relative; cursor:pointer; }
+  /* Tooltip */
+  .nube-palabras span:hover::after {
+    content: attr(data-tooltip);
+    position:absolute;
+    bottom:120%;
+    left:50%;
+    transform:translateX(-50%);
+    background:#333;
+    color:#fff;
+    padding:6px 10px;
+    border-radius:6px;
+    white-space: nowrap;
+    font-size:12px;
+    z-index:100;
+  }
+  /* Botón Referencias */
+  .btn-referencias {
+    display:inline-block;
+    margin-top:25px;
+    padding:10px 20px;
+    background:#FF6F61;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+  }
+  .referencias { display:none; margin-top:15px; background:#fff3cd; padding:15px; border-radius:8px; border:1px solid #FFD166; }
+  /* Animaciones */
+  .fadeInDown { animation: fadeInDown 1.2s ease forwards; opacity:0; }
+  .slideInRight { animation: slideInRight 1.5s ease forwards; opacity:0; }
+  .zoomIn { animation: zoomIn 1.3s ease forwards; opacity:0; }
+  @keyframes fadeInDown { from {transform:translateY(-20px); opacity:0;} to {transform:translateY(0); opacity:1;} }
+  @keyframes slideInRight { from {transform:translateX(20px); opacity:0;} to {transform:translateX(0); opacity:1;} }
+  @keyframes zoomIn { from {transform:scale(0.5); opacity:0;} to {transform:scale(1); opacity:1;} }
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    body { background:#1a1a1a; color:#f5f5f5; }
+    th { background:#00BFA6; color:#fff; }
+    .nube-palabras span { background:#FFD166; color:#333; }
+    .referencias { background:#333; border-color:#FFD166; color:#f5f5f5; }
+  }
+</style>
+</head>
+<body>
+
+<section class="fadeInDown">
+  <h2>Filosofía y Educación: el pensamiento que transforma la enseñanza</h2>
+  <p>La filosofía y la educación son disciplinas inseparables. La filosofía ofrece los fundamentos teóricos y éticos que guían el acto educativo, mientras que la educación pone en práctica esos principios para transformar al individuo y a la sociedad. Comprender su relación permite formar docentes críticos, reflexivos y éticamente responsables.</p>
+</section>
+
+<section class="slideInRight">
+  <h3>Relación entre Filosofía y Educación</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Dimensión</th>
+        <th>Filosofía</th>
+        <th>Educación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ontológica</td>
+        <td>Reflexiona sobre la naturaleza del ser y la existencia humana.</td>
+        <td>Busca el desarrollo integral del ser humano como sujeto activo del conocimiento.</td>
+      </tr>
+      <tr>
+        <td>Epistemológica</td>
+        <td>Analiza cómo se construye y valida el conocimiento.</td>
+        <td>Define los métodos de enseñanza y aprendizaje que facilitan la adquisición de saberes.</td>
+      </tr>
+      <tr>
+        <td>Axiológica</td>
+        <td>Determina los valores y principios éticos.</td>
+        <td>Promueve la formación en valores, la convivencia y la ciudadanía ética.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="zoomIn" id="conceptos">
+  <h3>Conceptos Clave</h3>
+  <div class="nube-palabras">
+    <span data-tooltip="Estudio de la moral y la acción humana.">Ética</span>
+    <span data-tooltip="Naturaleza del ser y la existencia.">Ontología</span>
+    <span data-tooltip="Origen y validez del conocimiento.">Epistemología</span>
+    <span data-tooltip="Principios del razonamiento.">Lógica</span>
+    <span data-tooltip="Pensar de forma coherente.">Racionalidad</span>
+    <span data-tooltip="Proceso de adquisición de conocimiento.">Aprendizaje</span>
+    <span data-tooltip="Ciencia de la enseñanza.">Didáctica</span>
+    <span data-tooltip="Estructura de contenidos educativos.">Currículo</span>
+    <span data-tooltip="Habilidades aplicadas.">Competencias</span>
+    <span data-tooltip="Nuevas estrategias pedagógicas.">Innovación pedagógica</span>
+  </div>
+</section>
+
+<section class="fadeInDown">
+  <h3>Conclusión</h3>
+  <p>La filosofía de la educación permite comprender el propósito último de enseñar: formar seres humanos críticos, libres y éticamente comprometidos con su entorno. En la era de las tecnologías emergentes, esta relación impulsa la innovación docente y la reflexión sobre el sentido del aprendizaje.</p>
+</section>
+
+<section style="text-align:center;">
+  <button class="btn-referencias" onclick="document.querySelector('.referencias').style.display='block'">Referencias</button>
+  <div class="referencias">
+    <ul>
+      <li>Savater, F. (2014). El valor de educar. Ariel.</li>
+      <li>Marina, J. A. (2018). La inteligencia que aprende. Ariel.</li>
+      <li>Se requiere verificación adicional para otras fuentes.</li>
+    </ul>
+  </div>
+  <p style="margin-top:20px; font-style:italic;">Elaborado por Gildardo Jaimes Hernández (2025)</p>
+</section>
+
+</body>
+</html>
